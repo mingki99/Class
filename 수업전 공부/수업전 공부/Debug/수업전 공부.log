@@ -1,4 +1,2 @@
 ﻿  소스.cpp
-C:\Users\dkwna\Desktop\ClASS\수업전 공부\수업전 공부\소스.cpp(16,1): error C2447: '{': 함수 헤더가 없습니다. 이전 스타일의 형식 목록입니까?
-C:\Users\dkwna\Desktop\ClASS\수업전 공부\수업전 공부\소스.cpp(39,10): error C2660: 'Shuffle': 함수는 0개의 인수를 사용하지 않습니다.
-C:\Users\dkwna\Desktop\ClASS\수업전 공부\수업전 공부\소스.cpp(26,6): message : 'Shuffle' 선언을 참조하십시오.
+  수업전 공부.vcxproj -> C:\Users\dkwna\Desktop\ClASS\수업전 공부\Debug\수업전 공부.exe

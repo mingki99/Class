@@ -1,53 +1,134 @@
-#include <iostream>
-#include <cstdlib>
-
-
+﻿#include <iostream>
+#include <conio.h>
 
 using namespace std;
 
-int Array();
+void Input();
+void Process();
+void Draw();
+void MovePlayer(int XDirection, int YDirection);
 
-void Shuffle(int a);
+//1. ������ �ʱ�ȭ �Ѵ�.
+int Map[10][10] =
+{
+	{1,1,1,1,1,1,1,1,1,1},
+	{1,0,0,0,0,0,1,0,0,1},
+	{1,0,1,0,0,0,1,0,0,1},
+	{1,0,1,0,0,0,1,0,0,1},
+	{1,0,1,0,0,0,1,0,0,1},
+	{1,0,0,0,0,0,0,0,0,1},
+	{1,0,0,0,1,0,0,1,0,1},
+	{1,0,0,0,1,0,0,1,0,1},
+	{1,0,0,0,1,0,0,1,0,1},
+	{1,1,1,1,1,1,1,1,1,1}
+};
 
-void Render();
+int PlayerX = 1;
+int PlayerY = 1;
+
+bool bIsRunning = true;
+int Key;
 
 
 int main()
 {
-	Array();
-	Shuffle(a);
-	Render();
+	while (bIsRunning)
+	{
+		Input();
+		Process();
+		Draw();
+	}
 
+	return 0;
 }
 
-int Array();
+void Input()
 {
+	Key = _getch();
+	if (Key == 0x00 || Key == 0xE0)
+	{
+		// Ȯ��Ű�� ��� Ű�� �ϳ��� �Է� �޴´�.
+		Key = _getch();
+	}
+}
 
-	int Number[10] = { 1,2,3,4,5,6,7,8,9,10 };
+void Process()
+{
+	switch (Key)
+	{
+		//up
+	case 'W':
+	case 'w':
+	{
+		MovePlayer(0, -1);
+		break;
+	}
+	//down
+	case 'S':
+	case 's':
+	{
+		MovePlayer(0, 1);
+		break;
+	}
+	//left
+	case 'A':
+	case 'a':
+	{
+		MovePlayer(-1, 0);
+		break;
+	}
+	//right
+	case 'D':
+	case 'd':
+	{
+		MovePlayer(1, 0);
+		break;
+	}
+
+	//quit
+	case 'Q':
+	case 'q':
+	{
+		bIsRunning = false;
+		break;
+	}
+	}
+}
+
+void Draw()
+{
+	//ȭ���� �����.
 	
-	return Number[10];
+
+	for (int Y = 0; Y < 10; ++Y)
+	{
+		for (int X = 0; X < 10; ++X)
+		{
+			if (PlayerX == X && PlayerY == Y)
+			{
+				cout << "P" << " ";
+			}
+			else if (Map[Y][X] == 0)
+			{
+				cout << " " << " ";
+			}
+			else if (Map[Y][X] == 1 )
+			{
+				cout << "X" << " ";
+			}
+			
+		}
+
+		cout << endl;
+	}
 }
 
-
-void Shuffle(int a)
+void MovePlayer(int XDirection, int YDirection)
 {
-	a = a[index1]
+	//���� ������ ���
+	PlayerX = PlayerX + XDirection;
+	PlayerY = PlayerY + YDirection;
+
+	//�̸� ����
 	
-	a[index1] = rand % 10;
-	a[index2] = rand % 10;
-
-	int b;
-
-	 b = Number[index1]
-	Number[index2]= Number[index1]
-	Number[index2] = b
-
-
-
 }
-
-void Render()
-{
-
-}
-
