@@ -1,134 +1,125 @@
 ﻿#include <iostream>
-#include <conio.h>
+#include <ctime>
+#include <cstdlib>
 
 using namespace std;
 
-void Input();
-void Process();
-void Draw();
-void MovePlayer(int XDirection, int YDirection);
+void Two();
+void Three();
+void Four();
+void Five();
+void Six();
 
-//1. ������ �ʱ�ȭ �Ѵ�.
-int Map[10][10] =
-{
-	{1,1,1,1,1,1,1,1,1,1},
-	{1,0,0,0,0,0,1,0,0,1},
-	{1,0,1,0,0,0,1,0,0,1},
-	{1,0,1,0,0,0,1,0,0,1},
-	{1,0,1,0,0,0,1,0,0,1},
-	{1,0,0,0,0,0,0,0,0,1},
-	{1,0,0,0,1,0,0,1,0,1},
-	{1,0,0,0,1,0,0,1,0,1},
-	{1,0,0,0,1,0,0,1,0,1},
-	{1,1,1,1,1,1,1,1,1,1}
-};
-
-int PlayerX = 1;
-int PlayerY = 1;
-
-bool bIsRunning = true;
-int Key;
 
 
 int main()
 {
-	while (bIsRunning)
+	int a = 0;
+	for (int b = 0; b <= 100; b++)
 	{
-		Input();
-		Process();
-		Draw();
+		a = a + b;
 	}
 
-	return 0;
+	cout << a << endl;
+
+	Two();
+	Three();
+	Four();
+	Five();
+	Six();
+
 }
 
-void Input()
+void Two()
 {
-	Key = _getch();
-	if (Key == 0x00 || Key == 0xE0)
+	int a = 0;
+	for (int b = 0; b <= 100; b += 2)
 	{
-		// Ȯ��Ű�� ��� Ű�� �ϳ��� �Է� �޴´�.
-		Key = _getch();
+		a = a + b;
 	}
+	cout << a << endl;
 }
 
-void Process()
+void Three()
 {
-	switch (Key)
+	int a = 0;
+	for (int b = 1; b <= 100; b += 2)
 	{
-		//up
-	case 'W':
-	case 'w':
-	{
-		MovePlayer(0, -1);
-		break;
+		a = a + b;
 	}
-	//down
-	case 'S':
-	case 's':
-	{
-		MovePlayer(0, 1);
-		break;
-	}
-	//left
-	case 'A':
-	case 'a':
-	{
-		MovePlayer(-1, 0);
-		break;
-	}
-	//right
-	case 'D':
-	case 'd':
-	{
-		MovePlayer(1, 0);
-		break;
-	}
-
-	//quit
-	case 'Q':
-	case 'q':
-	{
-		bIsRunning = false;
-		break;
-	}
-	}
+	cout << a << endl;
 }
 
-void Draw()
+void Four()
 {
-	//ȭ���� �����.
-	
-
-	for (int Y = 0; Y < 10; ++Y)
+	for (int b = 1; b <= 15; b++)
 	{
-		for (int X = 0; X < 10; ++X)
+		for (int c = 0; c < b; c++)
 		{
-			if (PlayerX == X && PlayerY == Y)
-			{
-				cout << "P" << " ";
-			}
-			else if (Map[Y][X] == 0)
-			{
-				cout << " " << " ";
-			}
-			else if (Map[Y][X] == 1 )
-			{
-				cout << "X" << " ";
-			}
-			
+			cout << '*' ;
 		}
-
 		cout << endl;
 	}
 }
 
-void MovePlayer(int XDirection, int YDirection)
-{
-	//���� ������ ���
-	PlayerX = PlayerX + XDirection;
-	PlayerY = PlayerY + YDirection;
 
-	//�̸� ����
+void Five()
+{
+	
+	
+	 // 1~ 10 까지 랜덤한 수 중복없이 를 출력하라 
+
+	 srand(time(NULL));
+	 cout << rand() << endl;
+	 //10까지 들어갈 배열 공간이 필요한다
+
+
+	 // 인덱스의 공간에 숫자를 입력해주자
+	 int Array[100];
+
+	 for (int i = 0; i < 100; i++)
+	 {
+		 Array[i] = i + 1; 
+	 }
+
+	 // 인덱스 shuffle
+	 for (int i = 1; i <= 2; i++)
+	 {
+		int Index1 = rand() % 100; // 0~99
+		int Index2 = rand() % 100;
+		
+		int a = Array[Index1];
+		Array[Index1] = Array[Index2];
+		Array[Index2] = a;
+	 }
+
+	 //난수 배열 출력
+
+	 for (int i = 0; i < 100; i++)
+	 {
+		 cout << Array[i] << endl;
+	 }
+	
+
+
+}
+
+
+void Six()
+{
+	int a = 0;
+	int b = 1;
+	int c = 1;
+	
+	cout << "a 함수값은 :" << a << endl;
+	cout << "b 함수값은 :" << b << endl;
+	
+	c = a;
+	a = b;
+	b = c;
+
+	cout << "a 함수값은 :" << a << endl;
+	cout << "b 함수값은 :" << b << endl;
 	
 }
+
