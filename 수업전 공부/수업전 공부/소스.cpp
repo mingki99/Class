@@ -1,36 +1,24 @@
 ﻿#include <iostream>
-#include <ctime>
-#include <cstdlib>
 
 using namespace std;
 
-void One();
-void Two();
-void Three();
-void Four();
-void Five();
-void Six();
+
 
 
 
 int main()
 {
-	int a = 0;
-	for (int b = 0; b <= 100; b++)
-	{
-		a = a + b;
-	}
+	double* p3 = new double[3];
+	p3[0] = 0.2;
+	p3[1] = 0.5;
+	p3[2] = 0.8;
 
-	cout << a << endl;
+	p3= p3 + 2;
 
-	Two();
-	Three();
-	Four();
-	Five();
-	Six();
+	cout << p3[0];
 
 }
-a
+
 void One()
 {
 
