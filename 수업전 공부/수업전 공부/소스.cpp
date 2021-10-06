@@ -1,66 +1,28 @@
 ﻿#include <iostream>
-#include "Engine.h"
-#include "Actor.h"
+
 #include <vector> //STL 
 
 using namespace std;
 
 
-//template function
-template<typename T ,typename Y>
-
-T Add(T a, Y b)
-{
-	return a + b;
-}
-
-//template class
-template <typename T>
-class NumerStore
-{
-puplic:
-	T Store[100]
-};
 
 int main()
 {
-	NumerStore<int> intStore;
-	NumerStore<string> strings;
+	
+	
+	vector<int>b = { 10 };
 
 
+	b.push_back(15);
 
-	float a = 2.5;
-	int b = 3;
+	b.push_back(20);
 
-	string f = "이것은";
-	char q = '*';
+	b.elase(1);
 
-	int c = 5;
-	float d = 2.5;
-
-	cout << Add<string, char>(f, q) << endl;
-	cout << Add<
-
-
-	cout << Add<float,int>(a, b) << endl;
-	cout << Add<int,float>(c, d) << endl;
-
-
-	//Engine* engine = new Engine();
-
-	////Wall , Player , Goal = (Object)
-	//engine->SpawnActor();
-	//engine->SpawnActor();
-	//engine->SpawnActor();
-	//engine->SpawnActor();
-
-	//engine->DestroyActor(0);
-	//engine->DestroyActor(0);
-	//engine->DestroyActor(0);
-	//engine->DestroyActor(0);
-	//engine->Run();
-
-	//delete engine;
+	
+	cout << b.front() << endl;
+	cout << b[1] << endl;
+	cout << b.back() << endl;
 
 	return 0;
 }
