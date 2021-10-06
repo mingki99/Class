@@ -2,30 +2,49 @@
 #include "Engine.h"
 #include "Actor.h"
 #include <vector> //STL 
-#include <list>
 
 using namespace std;
 
 
+//template function
+template<typename T ,typename Y>
+
+T Add(T a, Y b)
+{
+	return a + b;
+}
+
+//template class
+template <typename T>
+class NumerStore
+{
+puplic:
+	T Store[100]
+};
 
 int main()
 {
-	list<int> ListintStore;
+	NumerStore<int> intStore;
+	NumerStore<string> strings;
 
-	vector<int> intstore;
 
-	for (int i = 1; i <= 10; ++i)
-	{
-		intstore.push_back(i);
-	}
 
-	intstore.erase(intstore.begin() + 2);
-	intstore.insert(intstore.begin);
+	float a = 2.5;
+	int b = 3;
 
-	for (int i = 1; i <= 10; ++i)
-	{
-		cout << intstore[i] << endl;
-	}
+	string f = "이것은";
+	char q = '*';
+
+	int c = 5;
+	float d = 2.5;
+
+	cout << Add<string, char>(f, q) << endl;
+	cout << Add<
+
+
+	cout << Add<float,int>(a, b) << endl;
+	cout << Add<int,float>(c, d) << endl;
+
 
 	//Engine* engine = new Engine();
 

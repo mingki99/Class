@@ -1,20 +1,21 @@
 #include <iostream>
-#include "Engine.h"
-#include "Map.h"
-#include "Player.h"
-
-
 
 using namespace std;
+
+class Player;
+
+void move();
+
+void (int a, Player* Playerpointer)
+{
+	Playerpointer-> X
+
+}
 
 
 int main()
 {
-	Engine engine;
-
-	engine.Initialize();
-	engine.Input();
-	engine.Run();
+	
 
 
 	return 0;
