@@ -1,59 +1,66 @@
 ﻿#include <iostream>
+#include "Engine.h"
+#include "Actor.h"
+#include <vector> //STL 
 
 using namespace std;
 
 
+//template function
+template<typename T ,typename Y>
 
+T Add(T a, Y b)
+{
+	return a + b;
+}
 
+//template class
+template <typename T>
+class NumerStore
+{
+puplic:
+	T Store[100]
+};
 
 int main()
 {
-	double* p3 = new double[3];
-	p3[0] = 0.2;
-	p3[1] = 0.5;
-	p3[2] = 0.8;
+	NumerStore<int> intStore;
+	NumerStore<string> stringStore;
 
-	p3= p3 + 2;
+	intStore.store[0]=;
 
-	cout << p3[0];
+	float a = 2.5;
+	int b = 3;
 
+	string f = "이것은";
+	char q = '*';
+
+	int c = 5;
+	float d = 2.5;
+
+	cout << Add<string, char>(f, q) << endl;
+	cout << Add<
+
+
+	cout << Add<float,int>(a, b) << endl;
+	cout << Add<int,float>(c, d) << endl;
+
+
+	//Engine* engine = new Engine();
+
+	////Wall , Player , Goal = (Object)
+	//engine->SpawnActor();
+	//engine->SpawnActor();
+	//engine->SpawnActor();
+	//engine->SpawnActor();
+
+	//engine->DestroyActor(0);
+	//engine->DestroyActor(0);
+	//engine->DestroyActor(0);
+	//engine->DestroyActor(0);
+	//engine->Run();
+
+	//delete engine;
+
+	return 0;
 }
-
-void One()
-{
-
-}
-
-void Two()
-{
-	
-}
-
-void Three()
-{
-	
-}
-
-void Four()
-{
-	
-}
-
-
-void Five()
-{
-	
-	
-	 
-	
-
-
-}
-
-
-void Six()
-{
-	
-	
-}
-
