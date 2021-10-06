@@ -1,17 +1,5 @@
 ﻿  소스.cpp
-C:\Users\dkwna\Desktop\ClASS\수업전 공부\수업전 공부\소스.cpp(13,11): warning C4244: 'return': 'Y'에서 'T'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-          with
-          [
-              Y=float
-          ]
-          and
-          [
-              T=int
-          ]
-C:\Users\dkwna\Desktop\ClASS\수업전 공부\수업전 공부\소스.cpp(31): message : 컴파일되는 함수 템플릿 인스턴스화 'T Add<int,float>(T,Y)'에 대한 참조를 확인하세요.
-          with
-          [
-              T=int,
-              Y=float
-          ]
-  수업전 공부.vcxproj -> C:\Users\dkwna\Desktop\ClASS\수업전 공부\Debug\수업전 공부.exe
+C:\Users\dkwna\Desktop\ClASS\수업전 공부\수업전 공부\소스.cpp(21,7): error C2059: 구문 오류: ':'
+C:\Users\dkwna\Desktop\ClASS\수업전 공부\수업전 공부\소스.cpp(23): message : 컴파일되는 클래스 템플릿 인스턴스화 'NumerStore<T>'에 대한 참조를 확인하세요.
+C:\Users\dkwna\Desktop\ClASS\수업전 공부\수업전 공부\소스.cpp(21,1): error C2334: ':' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+C:\Users\dkwna\Desktop\ClASS\수업전 공부\수업전 공부\소스.cpp(23,1): fatal error C1903: 이전 오류를 복구할 수 없습니다. 컴파일이 중지됩니다.
