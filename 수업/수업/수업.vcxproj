@@ -139,11 +139,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Engin.cpp" />
-    <ClCompile Include="소스.cpp" />
+    <ClCompile Include="Actor.cpp" />
+    <ClCompile Include="AFloor.cpp" />
+    <ClCompile Include="AGoal.cpp" />
+    <ClCompile Include="APlayer.cpp" />
+    <ClCompile Include="AWall.cpp" />
+    <ClCompile Include="UEngin.cpp" />
+    <ClCompile Include="UWorld.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Vector2D.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Engin.h" />
+    <ClInclude Include="Actor.h" />
+    <ClInclude Include="AFloor.h" />
+    <ClInclude Include="AGoal.h" />
+    <ClInclude Include="APlayer.h" />
+    <ClInclude Include="AWall.h" />
+    <ClInclude Include="UEngin.h" />
+    <ClInclude Include="UWorld.h" />
+    <ClInclude Include="Vector2D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
