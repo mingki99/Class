@@ -1,48 +1,59 @@
 #include "Engine.h"
-#include <iostream>
+#include "World.h"
 
-using namespace std;
+UEngine::UEngine()
+{
+	Init();
+}
 
-Engine::Engine()
+UEngine::~UEngine()
+{
+	Term();
+}
+
+void UEngine::Run()
+{
+	World->Run();
+}
+
+void UEngine::SpawnPlayer(FVector2D NewLocation)
 {
 }
 
-Engine::~Engine()
+void UEngine::SpawnWall(FVector2D NewLocation)
 {
 }
 
-void Engine::Initialize()
+void UEngine::SpawnGoal(FVector2D NewLocation)
 {
-	cout << "초기화 되었습니다." << endl;
 }
 
-void Engine::Input()
+void UEngine::SpawnFloor(FVector2D NewLocation)
 {
-	cout << "입력받는다" << endl;
 }
 
-void Engine::Run()
+void UEngine::Init()
 {
-	while (true)
+	World = new UWorld();
+}
+
+void UEngine::Term()
+{
+	if (World != nullptr)
 	{
-		Input();
-		Process();
-		Render();
-
+		delete World;
+		World = nullptr;
 	}
 }
 
-void Engine::Process()
+void UEngine::Input()
 {
-	cout << "처리한다" << endl;
 }
 
-void Engine::Render()
+void UEngine::Tick()
 {
-	//system("cls")
-	cout << "렌더링 한다" << endl;
 }
 
-void Engine::Terminalize()
+void UEngine::Render()
 {
 }

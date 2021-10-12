@@ -1,5 +1,5 @@
 #pragma once
-
+#include <windows.h>
 #include "Vector2D.h"
 #include "Actor.h"
 
@@ -10,5 +10,6 @@ public:
 	~APlayer();
 
 	void Render();
+
 
 };
