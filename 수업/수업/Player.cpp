@@ -1,12 +1,25 @@
-#include "Player.h"
+﻿#include "Player.h"
+#include <iostream>
 
-Player::Player()
+APlayer::APlayer()
 {
-	int X = 1;
-	int Y = 1;
 }
 
-Player::~Player()
+APlayer::~APlayer()
 {
-
 }
+
+//void APlayer::Input()
+//{
+//}
+
+void APlayer::Render()
+{
+	
+	
+	std::cout << "P" << std::endl;
+}
+
+//void APlayer::Tick()
+//{
+//}
