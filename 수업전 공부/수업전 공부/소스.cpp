@@ -1,35 +1,73 @@
 ﻿#include <iostream>
+#include<vector>
 
-#include <vector> //STL 
+#include "Character.h"
+#include"Boar.h"
+#include"Goblin.h"
+#include"Player.h"
+#include"Slime.h"
+#include "Monster.h"
 
+#include<time.h>
+#include<stdlib.h>
 using namespace std;
+
 
 
 
 int main()
 {
-	string a = "Hello World";
-
-	string a0 = a.substr(0); //0 다음 count 가 없기에 끝까지 출력
-
-	cout << a0 << endl;
-	
-	string a1 = a.substr(0, 5);// 0 에서 5번째까지
-
-	cout << a1 << endl; // Hello 출력됨
-
-	string a2 = a.substr(6, 5); // 5 번째부터 5개출력
-
-	cout << a2 << endl;
-
-	string a3 = a.substr(6, 50); // 6 번째부터 50 개지만 되는대까지 출력
-
-	cout << a3 << endl;
-
-	string a4 = a.substr (a.size() -3); // - 역으로 끝에서  카운트 3개
-
-	cout << a4 << endl;
+	int a[10];
+	for (int i = 0; i < 10; i++)
+	{
+		a[i];
+	}
 	
 	
+	vector<UCharacter*> Characters;
+
+	Characters.push_back(new PPlayer());
+
+
+	srand(time(nullptr));
+
+	for (int i = 0; i < 10; i++)
+	{
+		int Type = rand() % 3;
+
+		if (Type == 0)
+		{
+			Characters.push_back(new PBoar());
+		}
+		else if (1 == Type)
+		{
+			Characters.push_back(new PGoblin());
+		}
+		else
+		{
+			Characters.push_back(new PSlime());
+
+		}
+	}
+
+
+	for (size_t i = 0; i < Characters.size(); ++i)
+	{
+		Characters[i] -> move();
+	}
+	for (UCharacter* PlayCharacters : Characters)
+	{
+		PlayCharacters->move();
+	}
+	for (auto iter = Characters.begin(); iter != Characters.end(); ++iter)
+	{
+		(*iter)->move();
+	}
+	//PGoblin* goblin = new PGoblin();
+
+	//delete goblin;
+
 	return 0;
 }
+
+
