@@ -17,19 +17,20 @@ using namespace std;
 
 int main()
 {
-	int a[10];
-	for (int i = 0; i < 10; i++)
-	{
-		a[i];
-	}
 	
 	
-	vector<UCharacter*> Characters;
+	
+	vector<UCharacter*> Characters; 
+	// UCharacter 의 포인터를 지정하고 변수를 지정해주무로써 
+	// 변수안에 vector 형의 UCharacter 의 값이 들어간다.
+
 
 	Characters.push_back(new PPlayer());
+	//먼져 새로운 Plat 클래스 안에 UCharacter 의 값이 들어간다?
 
 
 	srand(time(nullptr));
+	//랜덤
 
 	for (int i = 0; i < 10; i++)
 	{
